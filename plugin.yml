@@ -1,0 +1,12 @@
+name: MagicArrows
+version: 0.1.5
+author: kaitoyuuki
+main: com.github.kaitoyuuki.MagicArrows.MagicArrows
+commands:
+
+permissions:
+    magicarrows.*:
+        children:
+            magicarrows.torch: true
+            magicarrows.fire: true
+            magicarrows.tnt: true
