@@ -10,3 +10,12 @@ permissions:
             magicarrows.torch: true
             magicarrows.fire: true
             magicarrows.tnt: true
+    magicarrows.torch:
+        description: allows you to shoot torch arrows, which place a torch when they hit
+        default: true
+    magicarrows.fire:
+        description: allows you to shoot real fire arrows that actually burn things
+        default: op
+    magicarrows.tnt:
+        description: allows you to shoot explosive arrows
+        default: op
