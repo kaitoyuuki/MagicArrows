@@ -23,10 +23,9 @@ import org.bukkit.util.Vector;
 @SuppressWarnings("unused")
 public class BowListener implements Listener {
 	private MagicArrows plugin;
-	private Arrows arrow;
+
 	public BowListener(MagicArrows plugin) {
 		this.plugin = plugin;
-		arrow = new Arrows(plugin);
 
 	}
 	@EventHandler
