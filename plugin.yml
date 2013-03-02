@@ -1,5 +1,5 @@
 name: MagicArrows
-version: 0.1.5
+version: 0.1.7
 author: kaitoyuuki
 main: com.github.kaitoyuuki.MagicArrows.MagicArrows
 commands:

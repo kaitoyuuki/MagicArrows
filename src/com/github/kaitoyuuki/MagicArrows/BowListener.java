@@ -72,6 +72,7 @@ public class BowListener implements Listener {
 								stack.setAmount(amt - 1);
 								inventory.setItem(slot, stack);
 								projectile.remove();
+								plugin.incTorch();
 							}
 						}
 						else if (id == 46) {
@@ -86,6 +87,7 @@ public class BowListener implements Listener {
 								stack.setAmount(amt - 1);
 								inventory.setItem(slot, stack);
 								projectile.remove();
+								plugin.incTNT();
 							}
 						}
 						else if (id == 259) {
@@ -93,6 +95,7 @@ public class BowListener implements Listener {
 							if (player.hasPermission("magicarrows.fire")) {
 							block.setTypeId(51);
 							projectile.remove();
+							plugin.incFire();
 							}
 						}
 						else if (id == 262) {

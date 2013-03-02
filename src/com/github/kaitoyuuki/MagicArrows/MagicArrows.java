@@ -6,8 +6,9 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import com.turt2live.metrics.EMetrics;
-import com.turt2live.metrics.tracker.BasicTracker;
+
+import com.turt2live.metrics.MagicArrows.EMetrics;
+import com.turt2live.metrics.MagicArrows.tracker.BasicTracker;
 
 @SuppressWarnings("unused")
 public class MagicArrows extends JavaPlugin {
@@ -38,5 +39,14 @@ public class MagicArrows extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		HandlerList.unregisterAll(this);
+	}
+	public void incTorch() {
+		torch.increment();
+	}
+	public void incFire() {
+		fire.increment();
+	}
+	public void incTNT() {
+		tnt.increment();
 	}
 }
