@@ -63,19 +63,22 @@ public class BowListener implements Listener {
 						}
 						else if (id == 50) {
 							//torch: place a torch where the arrow stopped
-							block.setTypeId(50);
-							int slot = bowslot - 1;
-							PlayerInventory inventory = player.getInventory();
-							ItemStack stack = inventory.getItem(slot);
-							int amt = stack.getAmount();
-							stack.setAmount(amt - 1);
-							inventory.setItem(slot, stack);
-							projectile.remove();
+							if (player.hasPermission("magicarrows.torch")) {
+								block.setTypeId(50);
+								int slot = bowslot - 1;
+								PlayerInventory inventory = player.getInventory();
+								ItemStack stack = inventory.getItem(slot);
+								int amt = stack.getAmount();
+								stack.setAmount(amt - 1);
+								inventory.setItem(slot, stack);
+								projectile.remove();
+							}
 						}
 						else if (id == 46) {
 							//tnt: create an explosion where the arrow stops
 							if (player.hasPermission("magicarrows.tnt")) {
-								projectile.getWorld().createExplosion(projectile.getLocation(), 5);
+								int blast = plugin.getConfig().getInt("arrows.tnt");
+								projectile.getWorld().createExplosion(projectile.getLocation(), blast);
 								int slot = bowslot - 1;
 								PlayerInventory inventory = player.getInventory();
 								ItemStack stack = inventory.getItem(slot);
