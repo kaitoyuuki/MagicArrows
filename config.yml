@@ -1,0 +1,6 @@
+#Config file for MagicArrows, a Bukkit plugin by kaitoyuuki
+#config options for the various arrows
+arrows:
+    #blast strength for TNT arrows. actual tnt is around 4
+    tnt: 5
+    
