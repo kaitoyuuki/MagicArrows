@@ -1,5 +1,5 @@
 name: MagicArrows
-version: 0.1.10
+version: 0.1.11
 author: kaitoyuuki
 main: com.github.kaitoyuuki.MagicArrows.MagicArrows
 commands:
@@ -10,6 +10,9 @@ permissions:
             magicarrows.torch: true
             magicarrows.fire: true
             magicarrows.tnt: true
+            magicarrows.fireball: true
+            magicarrows.smite: true
+            magicarrows.freeze: true
     magicarrows.torch:
         description: allows you to shoot torch arrows, which place a torch when they hit
         default: true
@@ -18,4 +21,13 @@ permissions:
         default: op
     magicarrows.tnt:
         description: allows you to shoot explosive arrows
+        default: op
+    magicarrows.fireball:
+        description: allows you to shoot ghast fireballs
+        default: op
+    magicarrows.smite:
+        description: allows you to summon lightning bolts to where your arrow landed
+        default: op
+    magicarrows.freeze:
+        description: allows you to shoot freezing arrows that solidify nearby liquids
         default: op

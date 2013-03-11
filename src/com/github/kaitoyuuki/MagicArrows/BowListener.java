@@ -142,17 +142,16 @@ public class BowListener implements Listener {
 		Block block = loc.getBlock();
 		Entity shooter = projectile.getShooter();
 		Player player = null;
-		List<Integer> hotslots = new ArrayList<Integer>();
 		World world = projectile.getWorld();
-		for (int i = 0; i < 8; i++) {
-			hotslots.add(i);
-		}
 		for (Player pcheck : Bukkit.getServer().getOnlinePlayers()) {
 			if (pcheck.getEntityId() == shooter.getEntityId()) {
 				player = pcheck;
 			}
 		}
-		if (player != null) {
+		if (player == null) {
+			return;
+		}
+		else if (player != null) {
 			Material modifier = Material.AIR;
 			int id = 0;
 			if (player.getInventory().getItemInHand().getType() == Material.BOW) {
@@ -267,7 +266,7 @@ public class BowListener implements Listener {
 									PlayerInventory inventory = player.getInventory();
 									ItemStack stack = inventory.getItem(slot);
 									short dmg = stack.getDurability();
-									dmg--;
+									dmg++;
 									stack.setDurability(dmg);
 									projectile.remove();
 									plugin.incFire();
